@@ -26,15 +26,15 @@ export default class Header extends PureComponent {
   render() {
     const { open } = this.state;
     return (
-      <div>
+      <div >
         <nav
-          className="navbar has-background-danger-light"
+          className="navbar is-spaced is-danger"
           role="navigation"
           aria-label="main navigation"
         >
           <div className="container">
             <div className="navbar-brand">
-              <Link to="/" className=" navbar-item has-text-danger">
+              <Link to="/" className=" navbar-item">
                 <strong>DVLP</strong>
               </Link>
               <button
