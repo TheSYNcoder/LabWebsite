@@ -1,25 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Header from "./Components/header";
+import Splash from "./Components/splash";
+import { ThemeProvider } from '@material-ui/core';
+import GlobalStyles from 'src/Components/GlobalStyles';
+import theme from 'src/theme';
+// import 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme} >
+       <GlobalStyles />
+          <Router>
+
+              <Switch>
+                <Route exact path="/" >
+                <Splash />
+                </Route>
+
+                <Route path="/home">
+                  <Header />
+                  
+                </Route>
+                
+                <Route path="/ranking">
+                    <Rank />
+                </Route>
+              
+              </Switch> 
+          </Router>
+  </ThemeProvider>
   );
 }
 
