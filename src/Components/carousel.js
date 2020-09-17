@@ -27,6 +27,7 @@ export default () => (
   <Carousel
     centerMode
     {...getConfigurableProps()}
+    className="mt-1"
   >
     <div >
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
@@ -44,7 +45,7 @@ export default () => (
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg" />
       <p className="legend">Legend 4</p>
     </div>
-    <div>
+    {/* <div>
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" />
       <p className="legend">Legend 5</p>
     </div>
@@ -55,8 +56,8 @@ export default () => (
     <div>
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-7.jpg" />
       <p className="legend">Legend 7</p>
-    </div>
-    <div>
+    </div> */}
+    {/* <div>
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-8.jpg" />
       <p className="legend">Legend 8</p>
     </div>
@@ -83,11 +84,11 @@ export default () => (
     <div>
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-14.jpg" />
       <p className="legend">Legend 14</p>
-    </div>
+    </div> */}
   </Carousel>
 );
 
 const styles = {
   height : 400 ,
-  width : "100vw"
+  width : '100%'
 }

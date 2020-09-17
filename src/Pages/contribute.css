@@ -1,0 +1,27 @@
+.bgg{
+
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.jjj{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.bg{
+    width:100vw;
+    height:100vh;
+    background-image : url("img.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
