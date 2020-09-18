@@ -1,0 +1,21 @@
+.backgroundP{
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
+
+.rcolor{
+    color: #820001 ;
+}
+
+.ull {
+    list-style-type: disc !important;
+    padding-left:1em !important;
+    margin-left:1em;
+}
+ 
+.oll {
+    /* list-style-type: disc !important; */
+    /* list-style-type:  !important; */
+    padding-left:0.5em !important;
+    margin-left:1em;
+}
