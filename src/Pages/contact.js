@@ -18,12 +18,12 @@ const Contact = () =>{
                 </header>
                 <div class="container">
                     <h2 class="f3 gray  ttu tracked rcolor">Lab Supervisor</h2>
-                    <p class="lead pb0">Prof. Nibran Das</p>
+                    <p class="lead pb0">Prof. Nibaran Das</p>
                     <p class="f5 pv0">Jadavpur University</p>
                 </div>
                 <div class="container">
                     <h2 class="f3 gray ttu rcolor caseS">Phd Scholars</h2>
-                    <p class="lead pb0">Prof. Nibran Das</p>
+                    <p class="lead pb0">Prof. Nibaran Das</p>
                     <p class="f5 pv0">Jadavpur University</p>
                 </div>
                 <div class="container">

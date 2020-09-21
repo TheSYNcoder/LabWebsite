@@ -25,14 +25,20 @@ const NewsFeed = () => {
     //             console.log( error);
     //         })
     // }, [loaded] );
+    console.log(NEWS)
+    const CONTENTS = NEWS().map((val,i)=>{
+        return <PAPER data={val} />
+    })
     return (
         <div>
             <Container> 
-                <Typography variant="h1" color="textPrimary" className="pt-4 mt-4">
+                <Typography variant="h1" color="textPrimary" className="f1 pt-4 mt-4">
                     What's happening at our Lab
                 </Typography>
                 <div className="py-4 my-4">
-                    {news}
+                    <ul className="ull">
+                    {CONTENTS}
+                    </ul>
                 </div>
             </Container> 
         </div>
@@ -41,13 +47,16 @@ const NewsFeed = () => {
 
 const PAPER = ({data})=>{
     return(
-        <div>
-        <p>
-        {data.title} | {data.}
+        <li>
+        <p className="pv0 pa0">
+        <a href={data.link} className="f3 hover-dark-gray link rcolor" style={{textDecoration:"none"}}>{data.title} </a> | <span className="b">{data.year}</span>
         </p>
-        </div>
+        <Typography variant="h5" color="textSecondary">
+            {data.authors}
+        </Typography>
+        </li>
     )
-}
+};
 export default function Home(){
     const [content,setContent] = React.useState([])
     React.useEffect(()=>{
@@ -70,7 +79,7 @@ export default function Home(){
             <Carousel />
             <NewsFeed/>
             <Container>
-            <div class="container tc" >
+            <div class="container tc pb4" >
                     <h2 class="f1 fw3 rcolor caseS" >Lab Members</h2>
             </div>
             <Row >
