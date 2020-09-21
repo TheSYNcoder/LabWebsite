@@ -1,13 +1,35 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import logoName from "./logoName.png"
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from "./logo.jpg"
 import "tachyons"
 import "./nav.css"
 
 function Navigation() {
 
-  const [active,setActive] = useState(1)
+  const loc= useLocation().pathname;
+  // console.log(location.pathname)
+  const [mobile,setMobile] = useState(false);
+  useEffect(()=>{
+    if(window.innerWidth<=500){
+      setMobile(true);
+    }
+  });
+
+  let map = new Map([
+    ['/home',1],
+    ['/affiliates',2],
+    ['/courses',3],
+    ['/blog',4],
+    ['/contacts',5],
+    ['/contribute',6]
+  ]);
+
+  const [active,setActive] = useState(map.get(loc))
+  const [mess, setMess] = useState("Academic Login")
+  // useEffect(()=>{
+
+  // },[])
   const onChange = (x)=> {
       setActive(x)
   }
@@ -33,33 +55,33 @@ function Navigation() {
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto f5 helvetica">
             <li class="nav-item ">
-                <Link to='/home' class={`nav-link grow ${active===1 ? "active bbi": ""}`} onClick= {()=>onChange(1)}>
+                <Link to='/home' class={`nav-link grow ${active===1 ? "active": ""} ${!mobile && active===1 ? "bbi": ""}`} onClick= {()=>onChange(1)}>
                 {/* <Link to="/home" style={{textDecoration: 'none'}} > */}
                 Home <span class="sr-only">(current)</span>
                 </Link>
                 {/* </a> */}
             </li>
             <li class="nav-item ">
-                <Link to="/affiliates" class={`nav-link grow ${active===2 ? "active bbi": ""}`} onClick= {()=>onChange(2)}>
+                <Link to="/affiliates" class={`nav-link grow ${active===2 ? "active": ""} ${!mobile && active===2 ? "bbi": ""}`} onClick= {()=>onChange(2)}>
                 Affiliates</Link>
             </li>
             <li class="nav-item">
-                <Link to="/courses"  class={`nav-link grow ${active===3 ? "active bbi": ""}`}  onClick= {()=>onChange(3)}>
+                <Link to="/courses"  class={`nav-link grow ${active===3 ? "active ": ""} ${!mobile && active===3 ? "bbi": ""}`}  onClick= {()=>onChange(3)}>
                 Courses</Link>
             </li>
             <li class="nav-item">
-                <Link to="/blog" class={`nav-link grow ${active===4 ? "active bbi": ""}`} onClick= {()=>onChange(4)}>
+                <Link to="/blog" class={`nav-link grow ${active===4 ? "active": ""} ${!mobile && active===4 ? "bbi": ""}`} onClick= {()=>onChange(4)}>
                 Blog
                 </Link>
             </li>
             <li class="nav-item ">
-                <Link to="/contacts"  className={`nav-link grow ${active===5 ? "active bbi": ""}`}  onClick= {()=>onChange(5)}>
+                <Link to="/contacts"  className={`nav-link grow ${active===5 ? "active ": ""} ${!mobile && active===5 ? "bbi": ""}`}  onClick= {()=>onChange(5)}>
                 
                 Contacts
                 </Link>
             </li>
             <li class="nav-item">
-                <Link to="/contribute"  class={`nav-link grow ${active===6 ? "active bbi": ""}`} onClick= {()=>onChange(6)}>
+                <Link to="/contribute"  class={`nav-link grow ${active===6 ? "active ": ""} ${!mobile && active===6 ? "bbi": ""}`} onClick= {()=>onChange(6)}>
                 Contribute
                 </Link>
             </li>

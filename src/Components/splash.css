@@ -4,10 +4,11 @@
     bottom:0;
     left:0;
     right:0;
-    z-index: 4;
+    /* z-index: 4; */
 }
 .backgroundG{
     /* width: 100%; */
     background: linear-gradient(90deg, rgba(233,116,87,1) 0%, rgba(194,27,53,1) 26%, rgba(255,0,112,1) 92%);
     /* height: 600px; */
+    min-height: 100vh;
 }

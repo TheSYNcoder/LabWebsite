@@ -1,5 +1,4 @@
 import React from "react";
-import ComingSoon from "react-coming-soon";
 import Layout from "../Components/layout";
 import "./contribute.css";
 import { Typography } from "@material-ui/core";

@@ -1,8 +1,14 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import JU from "../images/ju.jpeg";
+import Lab1 from "../images/lab1.jpg";
+import Lab2 from "../images/lab2.jpg";
+import Lab3 from "../images/lab3.jpg";
+
 const tooglesGroupId = "Toggles";
 const valuesGroupId = "Values";
 const mainGroupId = "Main";
+
 
 const getConfigurableProps = () => ({
   showArrows: true,
@@ -30,20 +36,20 @@ export default () => (
     className="mt-1"
   >
     <div >
-      <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
-      <p className="legend">Legend 1</p>
+      <img alt="" style={styles} src={JU} />
+      <p className="legend">Jadavpur University</p>
     </div>
     <div>
-      <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-      <p className="legend">Legend 2</p>
+      <img alt="" style={styles} src={Lab1} />
+      <p className="legend">Lab setup</p>
     </div>
     <div>
-      <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg" />
-      <p className="legend">Legend 3</p>
+      <img alt="" style={styles} src={Lab2} />
+      <p className="legend">Lab setup</p>
     </div>
     <div>
-      <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg" />
-      <p className="legend">Legend 4</p>
+      <img alt="" style={styles} src={Lab3} />
+      <p className="legend">Lab Setup</p>
     </div>
     {/* <div>
       <img alt="" style={styles} src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" />
