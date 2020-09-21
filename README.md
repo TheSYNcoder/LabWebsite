@@ -1,6 +1,10 @@
 # Website of DVLP Jadavpur University 
 
 
+<p align="center">
+  <img src="https://github.com/TheSYNcoder/LabWebsite/blob/master/src/Components/logo.jpg"></img>
+</p>
+
 The prime motivation of the website is to showcase the current works and papers published by 
 Deep Learning and Language Processing lab, Jadavpur University.
 
